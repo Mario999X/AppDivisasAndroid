@@ -45,23 +45,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        double a = Integer.parseInt(editNumero.getText().toString());
+        double a = Double.parseDouble(editNumero.getText().toString());
+
+        final String cambioAmerica = String.valueOf(Math.round(a * DOLAR) + " $");
+        final String cambioIngles = String.valueOf(Math.round(a * LIBRA) + " £");
 
         switch (view.getId()){
             case R.id.btnAmbos:
-                textViewAmerica.setText(String.valueOf(a * DOLAR));
-                textViewIngles.setText(String.valueOf(a * LIBRA));
+                textViewAmerica.setText(cambioAmerica);
+                textViewIngles.setText(cambioIngles);
                 break;
             case R.id.btnReset:
-                editNumero.setText("");
+                editNumero.setText("0");
                 textViewAmerica.setText("0.0");
                 textViewIngles.setText("0.0");
                 break;
             case R.id.btnAmerica:
-                textViewAmerica.setText(String.valueOf(a * DOLAR));
+                textViewAmerica.setText(cambioAmerica);
                 break;
             case R.id.btnIngles:
-                textViewIngles.setText(String.valueOf(a * LIBRA));
+                textViewIngles.setText(cambioIngles);
                 break;
             default:
                 System.out.println("Definido");
