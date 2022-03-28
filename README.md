@@ -1,4 +1,4 @@
-# --- Divisas Android ---
+# --- DIVISAS ANDROID ---
 
 Se trata de una app de cálculo de divisas (Euro a Dólar/Libra) pensada para su uso en Android. 
 
